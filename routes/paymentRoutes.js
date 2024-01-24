@@ -67,7 +67,7 @@ router.post("/pay-general", async (req, res) => {
       req.body.kriyaId,
       req.body.email,
       req.body.name,
-      1
+      req.body.fee
     );
   
     return res.status(200).json({ url, data: txn });
