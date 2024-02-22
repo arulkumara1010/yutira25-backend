@@ -190,6 +190,69 @@ router.get("/stats", async (req, res) => {
       },
     ]);
 
+    const lunch1 = await Accommodation.aggregate([
+      {
+        $match: {
+          lunch1: true,
+        },
+      },
+      {
+        $group: {
+          _id: "$gender",
+          count: { $sum: 1 },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          gender: "$_id",
+          count: 1,
+        },
+      },
+    ]);
+
+    const lunch2 = await Accommodation.aggregate([
+      {
+        $match: {
+          lunch2: true,
+        },
+      },
+      {
+        $group: {
+          _id: "$gender",
+          count: { $sum: 1 },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          gender: "$_id",
+          count: 1,
+        },
+      },
+    ]);
+
+    const lunch3 = await Accommodation.aggregate([
+      {
+        $match: {
+          lunch3: true,
+        },
+      },
+      {
+        $group: {
+          _id: "$gender",
+          count: { $sum: 1 },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          gender: "$_id",
+          count: 1,
+        },
+      },
+    ]);
+
     const dinner1 = await Accommodation.aggregate([
       {
         $match: {
@@ -232,26 +295,7 @@ router.get("/stats", async (req, res) => {
       },
     ]);
 
-    const dinner3 = await Accommodation.aggregate([
-      {
-        $match: {
-          dinner3: true,
-        },
-      },
-      {
-        $group: {
-          _id: "$gender",
-          count: { $sum: 1 },
-        },
-      },
-      {
-        $project: {
-          _id: 0,
-          gender: "$_id",
-          count: 1,
-        },
-      },
-    ]);
+    
 
     const amenities = await Accommodation.aggregate([
       {
@@ -413,7 +457,7 @@ router.get("/stats", async (req, res) => {
 
     const totalRooms = await Accommodation.countDocuments();
 
-    res.status(200).json({ maleStats, femaleStats, breakfast1, breakfast2, breakfast3, dinner1, dinner2, dinner3, amenities, maleAmenities, femaleAmenities, daysSplit, fromTo, maleDetails, femaleDetails, totalRooms });
+    res.status(200).json({ maleStats, femaleStats, breakfast1, breakfast2, breakfast3,lunch1,lunch2,lunch3, dinner1, dinner2, amenities, maleAmenities, femaleAmenities, daysSplit, fromTo, maleDetails, femaleDetails, totalRooms });
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: error.message });

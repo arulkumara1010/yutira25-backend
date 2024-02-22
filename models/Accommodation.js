@@ -99,6 +99,9 @@ const AccommodationSchema = new Schema({
   vacated: {
     type:Boolean,
     default:false
+  },
+  room:{
+    type:String
   }
 });
 
