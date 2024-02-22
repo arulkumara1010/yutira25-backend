@@ -96,6 +96,10 @@ const AccommodationSchema = new Schema({
   room: {
     type: String,
   },
+  vacated: {
+    type:Boolean,
+    default:false
+  }
 });
 
 export default model("Accommodation", AccommodationSchema);
