@@ -57,15 +57,23 @@ const AccommodationSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  lunch1:{
+    type:Boolean,
+    default:false
+  },
+  lunch2:{
+    type:Boolean,
+    default:false
+  },
+  lunch3:{
+    type:Boolean,
+    default:false
+  },
   dinner1: {
     type: Boolean,
     default: false,
   },
   dinner2: {
-    type: Boolean,
-    default: false,
-  },
-  dinner3: {
     type: Boolean,
     default: false,
   },
