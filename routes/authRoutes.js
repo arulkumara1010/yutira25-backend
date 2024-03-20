@@ -21,7 +21,7 @@ const generateKriyaID = async (probe = 0) => {
   try {
     const count = await User.countDocuments({ kriyaId: { $ne: null } });
     let newId =
-      "KRIYA" + (count + 1069 + probe * probe).toString().padStart(4, "0");
+      "YUTIRA" + (count + 1000 + probe * probe).toString().padStart(4, "0");
     const existing = await User.findOne({ kriyaId: newId });
     if (existing) {
       console.log("Collision detected");

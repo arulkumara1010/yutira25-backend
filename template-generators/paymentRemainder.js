@@ -25,21 +25,7 @@ export const paymentRemainderTemplate = () => `
                                 <!-- HERO IMAGE -->
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tbody>
-                                        <tr>
-                                            <td align="center">
-                                                <a href="" target="_blank">
-
-                                                    <img src="https://i.ibb.co/129BwTm/header.png" width="666"
-                                                        border="0" alt="Kriya 2024 Cover"
-                                                        style="display: block; color: #666666;  font-family: Helvetica, arial, sans-serif; font-size: 16px;"
-                                                        class="img-max">
-
-
-
-                                                </a>
-
-                                            </td>
-                                        </tr>
+                                        
                                         <tr style="background: white; margin-top: 2rem;">
                                             <td align="center">
                                                 <p
@@ -70,7 +56,7 @@ export const paymentRemainderTemplate = () => `
                                                     If you have already paid the registration fee, please ignore
                                                     this reminder. If not, please make sure to pay the fee to avoid
                                                     missing out on the event. Exciting
-                                                    opportunities await you at Kriya this year, so don’t miss out!
+                                                    opportunities await you at Yutira this year, so don’t miss out!
 
                                                 </p>
 
@@ -78,7 +64,7 @@ export const paymentRemainderTemplate = () => `
                                                 <table style="margin: 0 auto; ">
                                                     <tr>
                                                         <td style="text-align: center">
-                                                            <a href="https://kriya.psgtech.ac.in/"
+                                                            <a href="http://www.yutira.psgtech.ac.in//"
                                                                 style="text-decoration: none;">
                                                                 <div
                                                                     style="box-shadow: 4px 4px 12px rgba(0,0,0,0.2); background: #332881; padding: 12px 24px; width: fit-content; border-radius: 24px;">
@@ -102,37 +88,20 @@ export const paymentRemainderTemplate = () => `
                                                 </table>
 
 
-                                                <p style="padding: 25px; font-family: 'Poppins', sans-serif;">
-                                                    <b>Best Wishes,</b><br />
-
-
-                                                    Kailesh Prabhu R<br />
-                                                    Chairperson, Students Union<br />
-                                                    PSG College of Technology
-                                                </p>
+                                                
 
                                                 <p style="font-size:0.75rem;">
-                                                    If you have any issues or queries regarding Kriya 2024, please
+                                                    If you have any issues or queries regarding Yutira 2024, please
                                                     feel free to reach out to us through
-                                                    <a href="mailto:events@psgkriya.in">
+                                                    <a href="mailto:cea.civil@psgtech.ac.in">
                                                         Mail
-                                                    </a> or <a href="https://www.instagram.com/kriya_psgtech/">
+                                                    </a> or <a href="https://www.instagram.com/cea_ici_psgtech/">
                                                         Instagram
                                                     </a>
                                                 </p>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td align="center">
-                                                <a href="" target="_blank">
-
-                                                    <img src="https://i.ibb.co/HBc2VWT/footer.png" width="666"
-                                                        border="0" alt="Kriya 2024  Cover"
-                                                        style="display: block; color: #666666;  font-family: Helvetica, arial, sans-serif; font-size: 16px;"
-                                                        class="img-max">
-                                                </a>
-                                            </td>
-                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                             </td>
@@ -155,7 +124,7 @@ export const paymentRemainderTemplate = () => `
                         <tr>
                             <td align="center"
                                 style="padding: 1rem;    font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#666666;">
-                                <span class="appleFooter" style="color:#666666;">Students Union - PSG College of
+                                <span class="appleFooter" style="color:#666666;">Civil Engineering Association and ICI - Student's Chapter - PSG College of
                                     Technology
                             </td>
                         </tr>

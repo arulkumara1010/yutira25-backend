@@ -29,22 +29,7 @@ export const paymentSuccessTemplate = (
                             <!-- HERO IMAGE -->
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <a href="" target="_blank">
-
-                                                <img src="https://i.ibb.co/129BwTm/header.png" width="666"
-                                                    border="0" alt="Kriya 2024 Cover"
-                                                    style="display: block; color: #666666;  font-family: Helvetica, arial, sans-serif; font-size: 16px;"
-                                                    class="img-max">
-
-
-
-                                            </a>
-                                            <!-- src="https://i.ibb.co/qknwSd6/Pastel-Rainbow-Modern-January-Monthly-Email-Header-1.png" -->
-
-                                        </td>
-                                    </tr>
+                                    
                                     <tr style="background: white; margin-top: 2rem;">
                                         <td align="center">
                                             <p
@@ -61,7 +46,7 @@ export const paymentSuccessTemplate = (
                                                 Hey ${name},
                                             </b>
                                             <p>
-                                                The transaction ${transactionId} has been successfully completed
+                                                The transaction has been successfully completed
                                                 by the participant ${kriyaId}.
                                             </p>
                                             <table>
@@ -90,7 +75,12 @@ export const paymentSuccessTemplate = (
                                                         <td style="font-weight: 600; width: 100px;">Event Id
                                                         </td>
                                                         <td style="font-weight: 500; padding-bottom: 4px;">
-                                                            ${eventId.toString() === "-1" ? "Nil" : eventId}
+                                                            ${
+                                                              eventId.toString() ===
+                                                              "-1"
+                                                                ? "Nil"
+                                                                : eventId
+                                                            }
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -107,28 +97,13 @@ export const paymentSuccessTemplate = (
                                             <b>Best Wishes,</b><br />
                                             <p style="padding-bottom: 4rem;">
 
-                                                Kriya 2024 Team<br />
+                                                Yutira 2024 Team<br />
                                                 PSG College of Technology
                                             </p>
 
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="" target="_blank">
-
-                                                <img src="https://i.ibb.co/HBc2VWT/footer.png" width="666"
-                                                    border="0" alt="Kriya 2024 Footer"
-                                                    style="display: block; color: #666666;  font-family: Helvetica, arial, sans-serif; font-size: 16px;"
-                                                    class="img-max">
-
-
-
-                                            </a>
-
-
-                                        </td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </td>
@@ -151,7 +126,7 @@ export const paymentSuccessTemplate = (
                     <tr>
                         <td align="center"
                             style="padding: 1rem;    font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#666666;">
-                            <span class="appleFooter" style="color:#666666;">Students Union - PSG College of
+                            <span class="appleFooter" style="color:#666666;">Civil Engineering Association and ICI - Student's Chapter - PSG College of
                                 Technology
                         </td>
                     </tr>

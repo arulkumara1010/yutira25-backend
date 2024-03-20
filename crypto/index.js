@@ -53,6 +53,6 @@ export const generateEncryptedPaymentData = (
   const raw = `regid=${kriyaId} name=${name.replace(
     /\s/g,
     "$"
-  )} email=${email} categoryid=9 transactionid=${transactionId} fees=${fee} returnurl=${redirectURL}`;
+  )} email=${email} categoryid=21 transactionid=${transactionId} fees=${fee} returnurl=${redirectURL}`;
   return formatPaymentUrl(encryptData(raw));
 };

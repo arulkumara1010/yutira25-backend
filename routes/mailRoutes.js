@@ -10,8 +10,8 @@ import { paymentRemainderTemplate } from "../template-generators/paymentRemainde
 // const MAIL_PASSWORD = "#kriya2023";
 const router = Router();
 
-const MAIL_USER = "events@psgkriya.in";
-const MAIL_PASSWORD = "Kr1y@2k24";
+const MAIL_USER = "cea.civil@psgtech.ac.in";
+const MAIL_PASSWORD = "Cea@2k23";
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
