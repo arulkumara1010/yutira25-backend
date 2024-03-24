@@ -23,7 +23,7 @@ const transporter = nodemailer.createTransport({
 
 export const sendMail = async (to, subject, html) => {
   const mailOptions = {
-    from: "noreply@psgkriya.in",
+    from: "cea.civil@psgtech.ac.in",
     to: to,
     subject: subject,
     html: html,
