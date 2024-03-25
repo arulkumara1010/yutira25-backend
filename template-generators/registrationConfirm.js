@@ -39,7 +39,7 @@ export const registrationConfirmTemplate = (
                                                 Hey ${name},
                                             </b>
                                             <p>
-                                                You have successfully registered for Kriya 2024.
+                                                You have successfully registered for Yutira 2024.
                                                 We are glad to have you on board.
                                                 Your
                                                 Yutira ID for the event is

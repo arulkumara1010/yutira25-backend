@@ -131,7 +131,7 @@ router.put("/:id", async (req, res) => {
 router.post("/attend", async (req, res) => {
   try {
     const { eventId, kriyaId } = req.body;
-    const user = await User.findOne({ kriyaId: `KRIYA${kriyaId}` });
+    const user = await User.findOne({ kriyaId: `YUTIRA${kriyaId}` });
     if (!user) return res.status(404).json({ message: "User not found!" });
     const register = await Registration.findOneAndUpdate(
       {

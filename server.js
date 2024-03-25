@@ -86,7 +86,7 @@ app.use("/api/conflicts", conflictRoutes);
 app.use("/api/convenor-auth", convenorAuthRoutes);
 
 app.get("/", async (req, res) => {
-  res.send("Welcome to the Kriya Backend SDK");
+  res.send("Welcome to the Yutira Backend SDK");
 });
 
 // perform a database connection when the server starts
