@@ -15,7 +15,7 @@ const generateNewTransactionID = async (probe = 0) => {
   try {
     const count = await PaymentDetail.countDocuments({});
     let newId =
-      "TXN_KRIYA_" +
+      "TXN_YUTIRA_" +
       (count + 42320 + probe * probe).toString().padStart(6, "0");
     const existing = await PaymentDetail.findOne({ transactionId: newId });
     if (existing) {
