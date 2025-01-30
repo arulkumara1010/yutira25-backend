@@ -74,4 +74,4 @@ const eventSchema = new Schema({
   },
 });
 
-export default model("Event", eventSchema);
+export default model("Event", eventSchema, "yutira-events-2025");

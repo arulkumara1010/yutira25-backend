@@ -11,4 +11,4 @@ const PaperSchema= new Schema({
     }
 });
 
-export default model("Paper", PaperSchema);
+export default model("Paper", PaperSchema, "yutira-2025-paper");

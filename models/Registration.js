@@ -19,4 +19,4 @@ const RegistrationSchema = new Schema({
   },
 });
 
-export default model("Registration", RegistrationSchema);
+export default model("Registration", RegistrationSchema, "yutira-2025-reg");
