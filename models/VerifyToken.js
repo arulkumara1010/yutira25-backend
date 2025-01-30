@@ -8,4 +8,4 @@ const tokenSchema = new Schema({
   },
 });
 
-export default mongoose.models.VerifyToken || model("VerifyToken", tokenSchema);
+export default mongoose.models.VerifyToken || model("VerifyToken", tokenSchema, "yutira-2025-verify");
