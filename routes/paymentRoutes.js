@@ -62,15 +62,15 @@ router.post("/pay-general", async (req, res) => {
       datetime: new Date(),
       eventId: "-1",
     });
-    const url = generateEncryptedPaymentData(
-      id,
-      req.body.kriyaId,
-      req.body.email,
-      req.body.name,
-      req.body.fee
-    );
-  
-    return res.status(200).json({ url, data: txn });
+    // const url = generateEncryptedPaymentData(
+    //   id,
+    //   req.body.kriyaId,
+    //   req.body.email,
+    //   req.body.name,
+    //   req.body.fee
+    // );
+
+    return res.status(200).json({ data: txn });
   } catch (error) {
     console.log(error);
     return res.status(500).json({ message: error });
@@ -91,14 +91,14 @@ router.post("/onspot/pay-general", async (req, res) => {
       datetime: new Date(),
       eventId: "-2",
     });
-    const url = generateEncryptedPaymentData(
-      id,
-      req.body.kriyaId,
-      req.body.email,
-      req.body.name,
-      req.body.fee
-    );
-    return res.status(200).json({ url, data: txn });
+    // const url = generateEncryptedPaymentData(
+    //   id,
+    //   req.body.kriyaId,
+    //   req.body.email,
+    //   req.body.name,
+    //   req.body.fee
+    // );
+    return res.status(200).json({ data: txn });
   } catch (error) {
     console.log(error);
     return res.status(500).json({ error: error.message });
@@ -111,18 +111,20 @@ router.get("/success", async (req, res) => {
       {
         $match: {
           status: "SUCCESS",
-        }
-      }, {
+        },
+      },
+      {
         $group: {
           _id: "$eventId",
           totalFee: { $sum: "$fee" },
-        }
-      }
-    ])
+        },
+      },
+    ]);
     return res.json({
       total: paymentDetails.reduce((acc, curr) => {
         return acc + curr.totalFee;
-      }, 0), paymentDetails
+      }, 0),
+      paymentDetails,
     });
   } catch (error) {
     return res.status(500).json({ message: error });
@@ -146,14 +148,14 @@ router.post("/pay-workshop/:id", async (req, res) => {
       datetime: new Date(),
       eventId: req.params.id,
     });
-    const url = generateEncryptedPaymentData(
-      id,
-      req.body.kriyaId,
-      req.body.email,
-      req.body.name,
-      req.body.fee
-    );
-    return res.status(200).json({ url, data: txn });
+    // const url = generateEncryptedPaymentData(
+    //   id,
+    //   req.body.kriyaId,
+    //   req.body.email,
+    //   req.body.name,
+    //   req.body.fee
+    // );
+    return res.status(200).json({ data: txn });
   } catch (error) {
     console.log(error);
     return res.status(500).json({ message: error });
@@ -228,9 +230,7 @@ router.get("/confirm", async (req, res) => {
       } else if (txn.eventId.toString() === "-2") {
         return res
           .status(200)
-          .redirect(
-            `${HELPDESK_URL}/payment?txn=${txn.transactionId}`
-          );
+          .redirect(`${HELPDESK_URL}/payment?txn=${txn.transactionId}`);
       } else {
         return res
           .status(200)
@@ -252,9 +252,7 @@ router.get("/confirm", async (req, res) => {
       } else if (txn.eventId.toString() === "-2") {
         return res
           .status(200)
-          .redirect(
-            `${HELPDESK_URL}/payment?txn=${txn.transactionId}`
-          );
+          .redirect(`${HELPDESK_URL}/payment?txn=${txn.transactionId}`);
       } else {
         return res
           .status(400)
@@ -298,56 +296,62 @@ router.get("/random", async (req, res) => {
         $match: {
           type: "WORKSHOP",
           status: "SUCCESS",
-        }
+        },
       },
       {
         $project: {
           _id: 0,
           email: 1,
-        }
+        },
       },
-    ])
+    ]);
 
     const general = await PaymentDetail.aggregate([
       {
         $match: {
           type: "GENERAL",
           status: "SUCCESS",
-        }
-
+        },
       },
       {
         $project: {
           _id: 0,
           email: 1,
-        }
+        },
       },
-    ])
+    ]);
 
     const workshopEmails = workshop.map((item) => item.email);
     const generalEmails = general.map((item) => item.email);
 
     // filter common emails
-    const commonEmails = workshopEmails.filter((email) => generalEmails.includes(email));
-
+    const commonEmails = workshopEmails.filter((email) =>
+      generalEmails.includes(email)
+    );
 
     // get unique payment success emails
     const uniqueSuccess = await PaymentDetail.aggregate([
       {
         $match: {
           status: "SUCCESS",
-        }
+        },
       },
       {
         $group: {
           _id: "$email",
-          count: { $sum: 1 }
-        }
+          count: { $sum: 1 },
+        },
       },
-    ])
+    ]);
 
-
-    return res.status(200).json({ uni: uniqueSuccess.length, work: workshopEmails.length, gen: generalEmails.length, common: commonEmails.length, onlyWork: workshopEmails.length - commonEmails.length, onlyGen: generalEmails.length - commonEmails.length });
+    return res.status(200).json({
+      uni: uniqueSuccess.length,
+      work: workshopEmails.length,
+      gen: generalEmails.length,
+      common: commonEmails.length,
+      onlyWork: workshopEmails.length - commonEmails.length,
+      onlyGen: generalEmails.length - commonEmails.length,
+    });
   } catch (error) {
     return res.status(400).json({ error });
   }
