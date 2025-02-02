@@ -97,7 +97,7 @@ export const paymentSuccessTemplate = (
                                             <b>Best Wishes,</b><br />
                                             <p style="padding-bottom: 4rem;">
 
-                                                Yutira 2024 Team<br />
+                                                Yutira 2025 Team<br />
                                                 PSG College of Technology
                                             </p>
 

@@ -44,13 +44,13 @@ export const verifyEmailTemplate = (
                                             <a href="${link}"
                                                 style="color: #332881; font-weight: 600;">${link}</a>
                                             <p>
-                                                In case you did not register for Yutira 2024, please ignore this
+                                                In case you did not register for Yutira 2025, please ignore this
                                                 email.
                                             </p>
                                             <b>Best Wishes,</b><br />
                                             <p style="padding-bottom: 4rem;">
 
-                                                Yutira 2024 Team<br />
+                                                Yutira 2025 Team<br />
                                                 PSG College of Technology
                                             </p>
 

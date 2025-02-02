@@ -91,7 +91,7 @@ export const paymentRemainderTemplate = () => `
                                                 
 
                                                 <p style="font-size:0.75rem;">
-                                                    If you have any issues or queries regarding Yutira 2024, please
+                                                    If you have any issues or queries regarding Yutira 2025, please
                                                     feel free to reach out to us through
                                                     <a href="mailto:cea.civil@psgtech.ac.in">
                                                         Mail
