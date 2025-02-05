@@ -7,9 +7,7 @@ passport.use(
   new GoogleStrategy(
     {
       callbackURL: `${BACKEND_URL}/api/auth/google/callback`,
-      clientID:
-        "754448625085-pnk2vgisaiv6a472qjcb8370uod0bksp.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientID: "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",
       passReqToCallback: true,
     },
     async (req, accessToken, refreshToken, profile, done) => {
@@ -41,7 +39,6 @@ passport.use(
           }
           req._user = currentUser;
           req._isExistingUser = currentUser.kriyaId !== null;
-          
 
           done(null, currentUser);
         }
